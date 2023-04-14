@@ -1,0 +1,460 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="994pt" height="322pt" viewBox="0.00 0.00 994.00 322.41">
+<g id="graph0" class="graph" transform="scale(0.546454 0.546454) rotate(0) translate(4 586)">
+<title>MonotonicNet</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-586 1815,-586 1815,4 -4,4"/>
+<!-- 0 -->
+<g id="node1" class="node">
+<title>0</title>
+<polygon fill="lightyellow" stroke="none" points="106,-307 0,-307 0,-275 106,-275 106,-307"/>
+<polygon fill="none" stroke="black" points="0,-275 0,-307 62,-307 62,-275 0,-275"/>
+<text text-anchor="start" x="5" y="-294" font-family="Linux libertine" font-size="10.00">input-tensor</text>
+<text text-anchor="start" x="14.5" y="-283" font-family="Linux libertine" font-size="10.00">depth:0</text>
+<polygon fill="none" stroke="black" points="62,-275 62,-307 106,-307 106,-275 62,-275"/>
+<text text-anchor="start" x="67" y="-288.5" font-family="Linux libertine" font-size="10.00">(100, 1)</text>
+</g>
+<!-- 1 -->
+<g id="node2" class="node">
+<title>1</title>
+<polygon fill="aliceblue" stroke="none" points="297,-312 142,-312 142,-270 297,-270 297,-312"/>
+<polygon fill="none" stroke="black" points="142,-270 142,-312 206,-312 206,-270 142,-270"/>
+<text text-anchor="start" x="147" y="-294" font-family="Linux libertine" font-size="10.00">__getitem__</text>
+<text text-anchor="start" x="157.5" y="-283" font-family="Linux libertine" font-size="10.00">depth:1</text>
+<polygon fill="none" stroke="black" points="206,-291 206,-312 250,-312 250,-291 206,-291"/>
+<text text-anchor="start" x="215.5" y="-299" font-family="Linux libertine" font-size="10.00">input:</text>
+<polygon fill="none" stroke="black" points="250,-291 250,-312 297,-312 297,-291 250,-291"/>
+<text text-anchor="start" x="255" y="-299" font-family="Linux libertine" font-size="10.00">(100, 1) </text>
+<polygon fill="none" stroke="black" points="206,-270 206,-291 250,-291 250,-270 206,-270"/>
+<text text-anchor="start" x="211" y="-278" font-family="Linux libertine" font-size="10.00">output: </text>
+<polygon fill="none" stroke="black" points="250,-270 250,-291 297,-291 297,-270 250,-270"/>
+<text text-anchor="start" x="259.5" y="-278" font-family="Linux libertine" font-size="10.00">(100,) </text>
+</g>
+<!-- 0&#45;&gt;1 -->
+<g id="edge1" class="edge">
+<title>0-&gt;1</title>
+<path fill="none" stroke="black" d="M105.6,-291C113.84,-291 122.56,-291 131.35,-291"/>
+<polygon fill="black" stroke="black" points="131.08,-294.5 141.08,-291 131.08,-287.5 131.08,-294.5"/>
+</g>
+<!-- 2 -->
+<g id="node3" class="node">
+<title>2</title>
+<polygon fill="aliceblue" stroke="none" points="482,-312 333,-312 333,-270 482,-270 482,-312"/>
+<polygon fill="none" stroke="black" points="333,-270 333,-312 391,-312 391,-270 333,-270"/>
+<text text-anchor="start" x="338" y="-294" font-family="Linux libertine" font-size="10.00">unsqueeze</text>
+<text text-anchor="start" x="345.5" y="-283" font-family="Linux libertine" font-size="10.00">depth:1</text>
+<polygon fill="none" stroke="black" points="391,-291 391,-312 435,-312 435,-291 391,-291"/>
+<text text-anchor="start" x="400.5" y="-299" font-family="Linux libertine" font-size="10.00">input:</text>
+<polygon fill="none" stroke="black" points="435,-291 435,-312 482,-312 482,-291 435,-291"/>
+<text text-anchor="start" x="444.5" y="-299" font-family="Linux libertine" font-size="10.00">(100,) </text>
+<polygon fill="none" stroke="black" points="391,-270 391,-291 435,-291 435,-270 391,-270"/>
+<text text-anchor="start" x="396" y="-278" font-family="Linux libertine" font-size="10.00">output: </text>
+<polygon fill="none" stroke="black" points="435,-270 435,-291 482,-291 482,-270 435,-270"/>
+<text text-anchor="start" x="440" y="-278" font-family="Linux libertine" font-size="10.00">(100, 1) </text>
+</g>
+<!-- 1&#45;&gt;2 -->
+<g id="edge2" class="edge">
+<title>1-&gt;2</title>
+<path fill="none" stroke="black" d="M296.96,-291C305.25,-291 313.72,-291 322.1,-291"/>
+<polygon fill="black" stroke="black" points="322.04,-294.5 332.04,-291 322.04,-287.5 322.04,-294.5"/>
+</g>
+<!-- 3 -->
+<g id="node4" class="node">
+<title>3</title>
+<polygon fill="aliceblue" stroke="none" points="657,-582 518,-582 518,-540 657,-540 657,-582"/>
+<polygon fill="none" stroke="black" points="518,-540 518,-582 561,-582 561,-540 518,-540"/>
+<text text-anchor="start" x="527.5" y="-564" font-family="Linux libertine" font-size="10.00">linear</text>
+<text text-anchor="start" x="523" y="-553" font-family="Linux libertine" font-size="10.00">depth:2</text>
+<polygon fill="none" stroke="black" points="561,-561 561,-582 605,-582 605,-561 561,-561"/>
+<text text-anchor="start" x="570.5" y="-569" font-family="Linux libertine" font-size="10.00">input:</text>
+<polygon fill="none" stroke="black" points="605,-561 605,-582 657,-582 657,-561 605,-561"/>
+<text text-anchor="start" x="612.5" y="-569" font-family="Linux libertine" font-size="10.00">(100, 1) </text>
+<polygon fill="none" stroke="black" points="561,-540 561,-561 605,-561 605,-540 561,-540"/>
+<text text-anchor="start" x="566" y="-548" font-family="Linux libertine" font-size="10.00">output: </text>
+<polygon fill="none" stroke="black" points="605,-540 605,-561 657,-561 657,-540 605,-540"/>
+<text text-anchor="start" x="610" y="-548" font-family="Linux libertine" font-size="10.00">(100, 10) </text>
+</g>
+<!-- 2&#45;&gt;3 -->
+<g id="edge3" class="edge">
+<title>2-&gt;3</title>
+<path fill="none" stroke="black" d="M412.71,-311.88C422.92,-357.5 453.07,-467.05 518,-531 518.86,-531.84 519.74,-532.66 520.65,-533.46"/>
+<polygon fill="black" stroke="black" points="518.31,-536.84 528.39,-540.1 522.54,-531.27 518.31,-536.84"/>
+</g>
+<!-- 4 -->
+<g id="node5" class="node">
+<title>4</title>
+<polygon fill="aliceblue" stroke="none" points="657,-522 518,-522 518,-480 657,-480 657,-522"/>
+<polygon fill="none" stroke="black" points="518,-480 518,-522 561,-522 561,-480 518,-480"/>
+<text text-anchor="start" x="527.5" y="-504" font-family="Linux libertine" font-size="10.00">linear</text>
+<text text-anchor="start" x="523" y="-493" font-family="Linux libertine" font-size="10.00">depth:2</text>
+<polygon fill="none" stroke="black" points="561,-501 561,-522 605,-522 605,-501 561,-501"/>
+<text text-anchor="start" x="570.5" y="-509" font-family="Linux libertine" font-size="10.00">input:</text>
+<polygon fill="none" stroke="black" points="605,-501 605,-522 657,-522 657,-501 605,-501"/>
+<text text-anchor="start" x="612.5" y="-509" font-family="Linux libertine" font-size="10.00">(100, 1) </text>
+<polygon fill="none" stroke="black" points="561,-480 561,-501 605,-501 605,-480 561,-480"/>
+<text text-anchor="start" x="566" y="-488" font-family="Linux libertine" font-size="10.00">output: </text>
+<polygon fill="none" stroke="black" points="605,-480 605,-501 657,-501 657,-480 605,-480"/>
+<text text-anchor="start" x="610" y="-488" font-family="Linux libertine" font-size="10.00">(100, 10) </text>
+</g>
+<!-- 2&#45;&gt;4 -->
+<g id="edge4" class="edge">
+<title>2-&gt;4</title>
+<path fill="none" stroke="black" d="M416.27,-311.89C430.89,-348.66 465.82,-425.37 518,-471 519.19,-472.04 520.42,-473.05 521.69,-474.03"/>
+<polygon fill="black" stroke="black" points="519.27,-477.3 529.5,-480.06 523.23,-471.52 519.27,-477.3"/>
+</g>
+<!-- 5 -->
+<g id="node6" class="node">
+<title>5</title>
+<polygon fill="aliceblue" stroke="none" points="657,-462 518,-462 518,-420 657,-420 657,-462"/>
+<polygon fill="none" stroke="black" points="518,-420 518,-462 561,-462 561,-420 518,-420"/>
+<text text-anchor="start" x="527.5" y="-444" font-family="Linux libertine" font-size="10.00">linear</text>
+<text text-anchor="start" x="523" y="-433" font-family="Linux libertine" font-size="10.00">depth:2</text>
+<polygon fill="none" stroke="black" points="561,-441 561,-462 605,-462 605,-441 561,-441"/>
+<text text-anchor="start" x="570.5" y="-449" font-family="Linux libertine" font-size="10.00">input:</text>
+<polygon fill="none" stroke="black" points="605,-441 605,-462 657,-462 657,-441 605,-441"/>
+<text text-anchor="start" x="612.5" y="-449" font-family="Linux libertine" font-size="10.00">(100, 1) </text>
+<polygon fill="none" stroke="black" points="561,-420 561,-441 605,-441 605,-420 561,-420"/>
+<text text-anchor="start" x="566" y="-428" font-family="Linux libertine" font-size="10.00">output: </text>
+<polygon fill="none" stroke="black" points="605,-420 605,-441 657,-441 657,-420 605,-420"/>
+<text text-anchor="start" x="610" y="-428" font-family="Linux libertine" font-size="10.00">(100, 10) </text>
+</g>
+<!-- 2&#45;&gt;5 -->
+<g id="edge5" class="edge">
+<title>2-&gt;5</title>
+<path fill="none" stroke="black" d="M423.06,-311.7C442.28,-337.77 478.35,-382.57 518,-411 519.7,-412.22 521.46,-413.4 523.26,-414.55"/>
+<polygon fill="black" stroke="black" points="521.17,-417.97 531.57,-420.01 524.71,-411.93 521.17,-417.97"/>
+</g>
+<!-- 6 -->
+<g id="node7" class="node">
+<title>6</title>
+<polygon fill="aliceblue" stroke="none" points="657,-402 518,-402 518,-360 657,-360 657,-402"/>
+<polygon fill="none" stroke="black" points="518,-360 518,-402 561,-402 561,-360 518,-360"/>
+<text text-anchor="start" x="527.5" y="-384" font-family="Linux libertine" font-size="10.00">linear</text>
+<text text-anchor="start" x="523" y="-373" font-family="Linux libertine" font-size="10.00">depth:2</text>
+<polygon fill="none" stroke="black" points="561,-381 561,-402 605,-402 605,-381 561,-381"/>
+<text text-anchor="start" x="570.5" y="-389" font-family="Linux libertine" font-size="10.00">input:</text>
+<polygon fill="none" stroke="black" points="605,-381 605,-402 657,-402 657,-381 605,-381"/>
+<text text-anchor="start" x="612.5" y="-389" font-family="Linux libertine" font-size="10.00">(100, 1) </text>
+<polygon fill="none" stroke="black" points="561,-360 561,-381 605,-381 605,-360 561,-360"/>
+<text text-anchor="start" x="566" y="-368" font-family="Linux libertine" font-size="10.00">output: </text>
+<polygon fill="none" stroke="black" points="605,-360 605,-381 657,-381 657,-360 605,-360"/>
+<text text-anchor="start" x="610" y="-368" font-family="Linux libertine" font-size="10.00">(100, 10) </text>
+</g>
+<!-- 2&#45;&gt;6 -->
+<g id="edge6" class="edge">
+<title>2-&gt;6</title>
+<path fill="none" stroke="black" d="M444.58,-311.82C465.73,-323.76 493.1,-338.76 518,-351 521.09,-352.52 524.27,-354.04 527.49,-355.56"/>
+<polygon fill="black" stroke="black" points="525.69,-359.04 536.24,-360.05 528.63,-352.69 525.69,-359.04"/>
+</g>
+<!-- 7 -->
+<g id="node8" class="node">
+<title>7</title>
+<polygon fill="aliceblue" stroke="none" points="657,-342 518,-342 518,-300 657,-300 657,-342"/>
+<polygon fill="none" stroke="black" points="518,-300 518,-342 561,-342 561,-300 518,-300"/>
+<text text-anchor="start" x="527.5" y="-324" font-family="Linux libertine" font-size="10.00">linear</text>
+<text text-anchor="start" x="523" y="-313" font-family="Linux libertine" font-size="10.00">depth:2</text>
+<polygon fill="none" stroke="black" points="561,-321 561,-342 605,-342 605,-321 561,-321"/>
+<text text-anchor="start" x="570.5" y="-329" font-family="Linux libertine" font-size="10.00">input:</text>
+<polygon fill="none" stroke="black" points="605,-321 605,-342 657,-342 657,-321 605,-321"/>
+<text text-anchor="start" x="612.5" y="-329" font-family="Linux libertine" font-size="10.00">(100, 1) </text>
+<polygon fill="none" stroke="black" points="561,-300 561,-321 605,-321 605,-300 561,-300"/>
+<text text-anchor="start" x="566" y="-308" font-family="Linux libertine" font-size="10.00">output: </text>
+<polygon fill="none" stroke="black" points="605,-300 605,-321 657,-321 657,-300 605,-300"/>
+<text text-anchor="start" x="610" y="-308" font-family="Linux libertine" font-size="10.00">(100, 10) </text>
+</g>
+<!-- 2&#45;&gt;7 -->
+<g id="edge7" class="edge">
+<title>2-&gt;7</title>
+<path fill="none" stroke="black" d="M481.93,-303.38C490.34,-304.79 498.95,-306.24 507.44,-307.68"/>
+<polygon fill="black" stroke="black" points="506.66,-311.26 517.1,-309.47 507.82,-304.36 506.66,-311.26"/>
+</g>
+<!-- 8 -->
+<g id="node9" class="node">
+<title>8</title>
+<polygon fill="aliceblue" stroke="none" points="657,-282 518,-282 518,-240 657,-240 657,-282"/>
+<polygon fill="none" stroke="black" points="518,-240 518,-282 561,-282 561,-240 518,-240"/>
+<text text-anchor="start" x="527.5" y="-264" font-family="Linux libertine" font-size="10.00">linear</text>
+<text text-anchor="start" x="523" y="-253" font-family="Linux libertine" font-size="10.00">depth:2</text>
+<polygon fill="none" stroke="black" points="561,-261 561,-282 605,-282 605,-261 561,-261"/>
+<text text-anchor="start" x="570.5" y="-269" font-family="Linux libertine" font-size="10.00">input:</text>
+<polygon fill="none" stroke="black" points="605,-261 605,-282 657,-282 657,-261 605,-261"/>
+<text text-anchor="start" x="612.5" y="-269" font-family="Linux libertine" font-size="10.00">(100, 1) </text>
+<polygon fill="none" stroke="black" points="561,-240 561,-261 605,-261 605,-240 561,-240"/>
+<text text-anchor="start" x="566" y="-248" font-family="Linux libertine" font-size="10.00">output: </text>
+<polygon fill="none" stroke="black" points="605,-240 605,-261 657,-261 657,-240 605,-240"/>
+<text text-anchor="start" x="610" y="-248" font-family="Linux libertine" font-size="10.00">(100, 10) </text>
+</g>
+<!-- 2&#45;&gt;8 -->
+<g id="edge8" class="edge">
+<title>2-&gt;8</title>
+<path fill="none" stroke="black" d="M481.93,-278.62C490.34,-277.21 498.95,-275.76 507.44,-274.32"/>
+<polygon fill="black" stroke="black" points="507.82,-277.64 517.1,-272.53 506.66,-270.74 507.82,-277.64"/>
+</g>
+<!-- 9 -->
+<g id="node10" class="node">
+<title>9</title>
+<polygon fill="aliceblue" stroke="none" points="657,-222 518,-222 518,-180 657,-180 657,-222"/>
+<polygon fill="none" stroke="black" points="518,-180 518,-222 561,-222 561,-180 518,-180"/>
+<text text-anchor="start" x="527.5" y="-204" font-family="Linux libertine" font-size="10.00">linear</text>
+<text text-anchor="start" x="523" y="-193" font-family="Linux libertine" font-size="10.00">depth:2</text>
+<polygon fill="none" stroke="black" points="561,-201 561,-222 605,-222 605,-201 561,-201"/>
+<text text-anchor="start" x="570.5" y="-209" font-family="Linux libertine" font-size="10.00">input:</text>
+<polygon fill="none" stroke="black" points="605,-201 605,-222 657,-222 657,-201 605,-201"/>
+<text text-anchor="start" x="612.5" y="-209" font-family="Linux libertine" font-size="10.00">(100, 1) </text>
+<polygon fill="none" stroke="black" points="561,-180 561,-201 605,-201 605,-180 561,-180"/>
+<text text-anchor="start" x="566" y="-188" font-family="Linux libertine" font-size="10.00">output: </text>
+<polygon fill="none" stroke="black" points="605,-180 605,-201 657,-201 657,-180 605,-180"/>
+<text text-anchor="start" x="610" y="-188" font-family="Linux libertine" font-size="10.00">(100, 10) </text>
+</g>
+<!-- 2&#45;&gt;9 -->
+<g id="edge9" class="edge">
+<title>2-&gt;9</title>
+<path fill="none" stroke="black" d="M444.58,-270.18C465.73,-258.24 493.1,-243.24 518,-231 521.09,-229.48 524.27,-227.96 527.49,-226.44"/>
+<polygon fill="black" stroke="black" points="528.63,-229.31 536.24,-221.95 525.69,-222.96 528.63,-229.31"/>
+</g>
+<!-- 10 -->
+<g id="node11" class="node">
+<title>10</title>
+<polygon fill="aliceblue" stroke="none" points="657,-162 518,-162 518,-120 657,-120 657,-162"/>
+<polygon fill="none" stroke="black" points="518,-120 518,-162 561,-162 561,-120 518,-120"/>
+<text text-anchor="start" x="527.5" y="-144" font-family="Linux libertine" font-size="10.00">linear</text>
+<text text-anchor="start" x="523" y="-133" font-family="Linux libertine" font-size="10.00">depth:2</text>
+<polygon fill="none" stroke="black" points="561,-141 561,-162 605,-162 605,-141 561,-141"/>
+<text text-anchor="start" x="570.5" y="-149" font-family="Linux libertine" font-size="10.00">input:</text>
+<polygon fill="none" stroke="black" points="605,-141 605,-162 657,-162 657,-141 605,-141"/>
+<text text-anchor="start" x="612.5" y="-149" font-family="Linux libertine" font-size="10.00">(100, 1) </text>
+<polygon fill="none" stroke="black" points="561,-120 561,-141 605,-141 605,-120 561,-120"/>
+<text text-anchor="start" x="566" y="-128" font-family="Linux libertine" font-size="10.00">output: </text>
+<polygon fill="none" stroke="black" points="605,-120 605,-141 657,-141 657,-120 605,-120"/>
+<text text-anchor="start" x="610" y="-128" font-family="Linux libertine" font-size="10.00">(100, 10) </text>
+</g>
+<!-- 2&#45;&gt;10 -->
+<g id="edge10" class="edge">
+<title>2-&gt;10</title>
+<path fill="none" stroke="black" d="M423.06,-270.3C442.28,-244.23 478.35,-199.43 518,-171 519.7,-169.78 521.46,-168.6 523.26,-167.45"/>
+<polygon fill="black" stroke="black" points="524.71,-170.07 531.57,-161.99 521.17,-164.03 524.71,-170.07"/>
+</g>
+<!-- 11 -->
+<g id="node12" class="node">
+<title>11</title>
+<polygon fill="aliceblue" stroke="none" points="657,-102 518,-102 518,-60 657,-60 657,-102"/>
+<polygon fill="none" stroke="black" points="518,-60 518,-102 561,-102 561,-60 518,-60"/>
+<text text-anchor="start" x="527.5" y="-84" font-family="Linux libertine" font-size="10.00">linear</text>
+<text text-anchor="start" x="523" y="-73" font-family="Linux libertine" font-size="10.00">depth:2</text>
+<polygon fill="none" stroke="black" points="561,-81 561,-102 605,-102 605,-81 561,-81"/>
+<text text-anchor="start" x="570.5" y="-89" font-family="Linux libertine" font-size="10.00">input:</text>
+<polygon fill="none" stroke="black" points="605,-81 605,-102 657,-102 657,-81 605,-81"/>
+<text text-anchor="start" x="612.5" y="-89" font-family="Linux libertine" font-size="10.00">(100, 1) </text>
+<polygon fill="none" stroke="black" points="561,-60 561,-81 605,-81 605,-60 561,-60"/>
+<text text-anchor="start" x="566" y="-68" font-family="Linux libertine" font-size="10.00">output: </text>
+<polygon fill="none" stroke="black" points="605,-60 605,-81 657,-81 657,-60 605,-60"/>
+<text text-anchor="start" x="610" y="-68" font-family="Linux libertine" font-size="10.00">(100, 10) </text>
+</g>
+<!-- 2&#45;&gt;11 -->
+<g id="edge11" class="edge">
+<title>2-&gt;11</title>
+<path fill="none" stroke="black" d="M416.27,-270.11C430.89,-233.34 465.82,-156.63 518,-111 519.19,-109.96 520.42,-108.95 521.69,-107.97"/>
+<polygon fill="black" stroke="black" points="523.23,-110.48 529.5,-101.94 519.27,-104.7 523.23,-110.48"/>
+</g>
+<!-- 12 -->
+<g id="node13" class="node">
+<title>12</title>
+<polygon fill="aliceblue" stroke="none" points="657,-42 518,-42 518,0 657,0 657,-42"/>
+<polygon fill="none" stroke="black" points="518,0 518,-42 561,-42 561,0 518,0"/>
+<text text-anchor="start" x="527.5" y="-24" font-family="Linux libertine" font-size="10.00">linear</text>
+<text text-anchor="start" x="523" y="-13" font-family="Linux libertine" font-size="10.00">depth:2</text>
+<polygon fill="none" stroke="black" points="561,-21 561,-42 605,-42 605,-21 561,-21"/>
+<text text-anchor="start" x="570.5" y="-29" font-family="Linux libertine" font-size="10.00">input:</text>
+<polygon fill="none" stroke="black" points="605,-21 605,-42 657,-42 657,-21 605,-21"/>
+<text text-anchor="start" x="612.5" y="-29" font-family="Linux libertine" font-size="10.00">(100, 1) </text>
+<polygon fill="none" stroke="black" points="561,0 561,-21 605,-21 605,0 561,0"/>
+<text text-anchor="start" x="566" y="-8" font-family="Linux libertine" font-size="10.00">output: </text>
+<polygon fill="none" stroke="black" points="605,0 605,-21 657,-21 657,0 605,0"/>
+<text text-anchor="start" x="610" y="-8" font-family="Linux libertine" font-size="10.00">(100, 10) </text>
+</g>
+<!-- 2&#45;&gt;12 -->
+<g id="edge12" class="edge">
+<title>2-&gt;12</title>
+<path fill="none" stroke="black" d="M412.71,-270.12C422.92,-224.5 453.07,-114.95 518,-51 518.86,-50.16 519.74,-49.34 520.65,-48.54"/>
+<polygon fill="black" stroke="black" points="522.54,-50.73 528.39,-41.9 518.31,-45.16 522.54,-50.73"/>
+</g>
+<!-- 13 -->
+<g id="node14" class="node">
+<title>13</title>
+<polygon fill="aliceblue" stroke="none" points="854,-312 693,-312 693,-270 854,-270 854,-312"/>
+<polygon fill="none" stroke="black" points="693,-270 693,-312 736,-312 736,-270 693,-270"/>
+<text text-anchor="start" x="707.5" y="-294" font-family="Linux libertine" font-size="10.00">cat</text>
+<text text-anchor="start" x="698" y="-283" font-family="Linux libertine" font-size="10.00">depth:2</text>
+<polygon fill="none" stroke="black" points="736,-291 736,-312 780,-312 780,-291 736,-291"/>
+<text text-anchor="start" x="745.5" y="-299" font-family="Linux libertine" font-size="10.00">input:</text>
+<polygon fill="none" stroke="black" points="780,-291 780,-312 854,-312 854,-291 780,-291"/>
+<text text-anchor="start" x="785" y="-299" font-family="Linux libertine" font-size="10.00">10 x (100, 10) </text>
+<polygon fill="none" stroke="black" points="736,-270 736,-291 780,-291 780,-270 736,-270"/>
+<text text-anchor="start" x="741" y="-278" font-family="Linux libertine" font-size="10.00">output: </text>
+<polygon fill="none" stroke="black" points="780,-270 780,-291 854,-291 854,-270 780,-270"/>
+<text text-anchor="start" x="793.5" y="-278" font-family="Linux libertine" font-size="10.00">(1000, 10) </text>
+</g>
+<!-- 3&#45;&gt;13 -->
+<g id="edge13" class="edge">
+<title>3-&gt;13</title>
+<path fill="none" stroke="black" d="M645.53,-540.02C649.65,-537.33 653.54,-534.34 657,-531 718.56,-471.6 751.47,-372.71 764.98,-322.43"/>
+<polygon fill="black" stroke="black" points="768.59,-323.45 767.72,-312.89 761.82,-321.69 768.59,-323.45"/>
+</g>
+<!-- 4&#45;&gt;13 -->
+<g id="edge14" class="edge">
+<title>4-&gt;13</title>
+<path fill="none" stroke="black" d="M644.07,-480.17C648.66,-477.42 653.05,-474.37 657,-471 706.13,-429.07 741.82,-361.01 759.65,-321.69"/>
+<polygon fill="black" stroke="black" points="763.15,-323.44 764,-312.88 756.75,-320.6 763.15,-323.44"/>
+</g>
+<!-- 5&#45;&gt;13 -->
+<g id="edge15" class="edge">
+<title>5-&gt;13</title>
+<path fill="none" stroke="black" d="M641.98,-420.07C647.21,-417.3 652.31,-414.27 657,-411 693.87,-385.3 728.55,-346.57 750.1,-320.11"/>
+<polygon fill="black" stroke="black" points="753.37,-322.63 756.89,-312.64 747.91,-318.25 753.37,-322.63"/>
+</g>
+<!-- 6&#45;&gt;13 -->
+<g id="edge16" class="edge">
+<title>6-&gt;13</title>
+<path fill="none" stroke="black" d="M637.33,-360.09C643.97,-357.11 650.67,-354.02 657,-351 679.35,-340.31 703.74,-327.78 724.33,-316.93"/>
+<polygon fill="black" stroke="black" points="725.59,-319.69 732.8,-311.92 722.32,-313.51 725.59,-319.69"/>
+</g>
+<!-- 7&#45;&gt;13 -->
+<g id="edge17" class="edge">
+<title>7-&gt;13</title>
+<path fill="none" stroke="black" d="M656.75,-309.87C665.19,-308.5 673.91,-307.07 682.6,-305.66"/>
+<polygon fill="black" stroke="black" points="682.87,-309 692.18,-303.93 681.74,-302.09 682.87,-309"/>
+</g>
+<!-- 8&#45;&gt;13 -->
+<g id="edge18" class="edge">
+<title>8-&gt;13</title>
+<path fill="none" stroke="black" d="M656.75,-272.13C665.19,-273.5 673.91,-274.93 682.6,-276.34"/>
+<polygon fill="black" stroke="black" points="681.74,-279.91 692.18,-278.07 682.87,-273 681.74,-279.91"/>
+</g>
+<!-- 9&#45;&gt;13 -->
+<g id="edge19" class="edge">
+<title>9-&gt;13</title>
+<path fill="none" stroke="black" d="M637.33,-221.91C643.97,-224.89 650.67,-227.98 657,-231 679.35,-241.69 703.74,-254.22 724.33,-265.07"/>
+<polygon fill="black" stroke="black" points="722.32,-268.49 732.8,-270.08 725.59,-262.31 722.32,-268.49"/>
+</g>
+<!-- 10&#45;&gt;13 -->
+<g id="edge20" class="edge">
+<title>10-&gt;13</title>
+<path fill="none" stroke="black" d="M641.98,-161.93C647.21,-164.7 652.31,-167.73 657,-171 693.87,-196.7 728.55,-235.43 750.1,-261.89"/>
+<polygon fill="black" stroke="black" points="747.91,-263.75 756.89,-269.36 753.37,-259.37 747.91,-263.75"/>
+</g>
+<!-- 11&#45;&gt;13 -->
+<g id="edge21" class="edge">
+<title>11-&gt;13</title>
+<path fill="none" stroke="black" d="M644.07,-101.83C648.66,-104.58 653.05,-107.63 657,-111 706.13,-152.93 741.82,-220.99 759.65,-260.31"/>
+<polygon fill="black" stroke="black" points="756.75,-261.4 764,-269.12 763.15,-258.56 756.75,-261.4"/>
+</g>
+<!-- 12&#45;&gt;13 -->
+<g id="edge22" class="edge">
+<title>12-&gt;13</title>
+<path fill="none" stroke="black" d="M645.53,-41.98C649.65,-44.67 653.54,-47.66 657,-51 718.56,-110.4 751.47,-209.29 764.98,-259.57"/>
+<polygon fill="black" stroke="black" points="761.82,-260.31 767.72,-269.11 768.59,-258.55 761.82,-260.31"/>
+</g>
+<!-- 14 -->
+<g id="node15" class="node">
+<title>14</title>
+<polygon fill="aliceblue" stroke="none" points="1047,-312 890,-312 890,-270 1047,-270 1047,-312"/>
+<polygon fill="none" stroke="black" points="890,-270 890,-312 935,-312 935,-270 890,-270"/>
+<text text-anchor="start" x="895" y="-294" font-family="Linux libertine" font-size="10.00">reshape</text>
+<text text-anchor="start" x="896" y="-283" font-family="Linux libertine" font-size="10.00">depth:2</text>
+<polygon fill="none" stroke="black" points="935,-291 935,-312 979,-312 979,-291 935,-291"/>
+<text text-anchor="start" x="944.5" y="-299" font-family="Linux libertine" font-size="10.00">input:</text>
+<polygon fill="none" stroke="black" points="979,-291 979,-312 1047,-312 1047,-291 979,-291"/>
+<text text-anchor="start" x="989.5" y="-299" font-family="Linux libertine" font-size="10.00">(1000, 10) </text>
+<polygon fill="none" stroke="black" points="935,-270 935,-291 979,-291 979,-270 935,-270"/>
+<text text-anchor="start" x="940" y="-278" font-family="Linux libertine" font-size="10.00">output: </text>
+<polygon fill="none" stroke="black" points="979,-270 979,-291 1047,-291 1047,-270 979,-270"/>
+<text text-anchor="start" x="984" y="-278" font-family="Linux libertine" font-size="10.00">(10, 100, 10) </text>
+</g>
+<!-- 13&#45;&gt;14 -->
+<g id="edge23" class="edge">
+<title>13-&gt;14</title>
+<path fill="none" stroke="black" d="M853.84,-291C862.15,-291 870.64,-291 879.05,-291"/>
+<polygon fill="black" stroke="black" points="879.03,-294.5 889.03,-291 879.03,-287.5 879.03,-294.5"/>
+</g>
+<!-- 15 -->
+<g id="node16" class="node">
+<title>15</title>
+<polygon fill="aliceblue" stroke="none" points="1238,-312 1083,-312 1083,-270 1238,-270 1238,-312"/>
+<polygon fill="none" stroke="black" points="1083,-270 1083,-312 1126,-312 1126,-270 1083,-270"/>
+<text text-anchor="start" x="1097.5" y="-294" font-family="Linux libertine" font-size="10.00">cat</text>
+<text text-anchor="start" x="1088" y="-283" font-family="Linux libertine" font-size="10.00">depth:1</text>
+<polygon fill="none" stroke="black" points="1126,-291 1126,-312 1170,-312 1170,-291 1126,-291"/>
+<text text-anchor="start" x="1135.5" y="-299" font-family="Linux libertine" font-size="10.00">input:</text>
+<polygon fill="none" stroke="black" points="1170,-291 1170,-312 1238,-312 1238,-291 1170,-291"/>
+<text text-anchor="start" x="1175" y="-299" font-family="Linux libertine" font-size="10.00">(10, 100, 10) </text>
+<polygon fill="none" stroke="black" points="1126,-270 1126,-291 1170,-291 1170,-270 1126,-270"/>
+<text text-anchor="start" x="1131" y="-278" font-family="Linux libertine" font-size="10.00">output: </text>
+<polygon fill="none" stroke="black" points="1170,-270 1170,-291 1238,-291 1238,-270 1170,-270"/>
+<text text-anchor="start" x="1175" y="-278" font-family="Linux libertine" font-size="10.00">(10, 100, 10) </text>
+</g>
+<!-- 14&#45;&gt;15 -->
+<g id="edge24" class="edge">
+<title>14-&gt;15</title>
+<path fill="none" stroke="black" d="M1046.78,-291C1055.23,-291 1063.88,-291 1072.44,-291"/>
+<polygon fill="black" stroke="black" points="1072.21,-294.5 1082.21,-291 1072.21,-287.5 1072.21,-294.5"/>
+</g>
+<!-- 16 -->
+<g id="node17" class="node">
+<title>16</title>
+<polygon fill="#c1ffc1" stroke="none" points="1460,-312 1274,-312 1274,-270 1460,-270 1460,-312"/>
+<polygon fill="none" stroke="black" points="1274,-270 1274,-312 1348,-312 1348,-270 1274,-270"/>
+<text text-anchor="start" x="1279" y="-294" font-family="Linux libertine" font-size="10.00">MonotonicMax</text>
+<text text-anchor="start" x="1294.5" y="-283" font-family="Linux libertine" font-size="10.00">depth:1</text>
+<polygon fill="none" stroke="black" points="1348,-291 1348,-312 1392,-312 1392,-291 1348,-291"/>
+<text text-anchor="start" x="1357.5" y="-299" font-family="Linux libertine" font-size="10.00">input:</text>
+<polygon fill="none" stroke="black" points="1392,-291 1392,-312 1460,-312 1460,-291 1392,-291"/>
+<text text-anchor="start" x="1397" y="-299" font-family="Linux libertine" font-size="10.00">(10, 100, 10) </text>
+<polygon fill="none" stroke="black" points="1348,-270 1348,-291 1392,-291 1392,-270 1348,-270"/>
+<text text-anchor="start" x="1353" y="-278" font-family="Linux libertine" font-size="10.00">output: </text>
+<polygon fill="none" stroke="black" points="1392,-270 1392,-291 1460,-291 1460,-270 1392,-270"/>
+<text text-anchor="start" x="1405" y="-278" font-family="Linux libertine" font-size="10.00">(100, 10) </text>
+</g>
+<!-- 15&#45;&gt;16 -->
+<g id="edge25" class="edge">
+<title>15-&gt;16</title>
+<path fill="none" stroke="black" d="M1237.94,-291C1246.23,-291 1254.77,-291 1263.32,-291"/>
+<polygon fill="black" stroke="black" points="1263.12,-294.5 1273.12,-291 1263.12,-287.5 1263.12,-294.5"/>
+</g>
+<!-- 17 -->
+<g id="node18" class="node">
+<title>17</title>
+<polygon fill="#c1ffc1" stroke="none" points="1663,-312 1496,-312 1496,-270 1663,-270 1663,-312"/>
+<polygon fill="none" stroke="black" points="1496,-270 1496,-312 1567,-312 1567,-270 1496,-270"/>
+<text text-anchor="start" x="1501" y="-294" font-family="Linux libertine" font-size="10.00">MonotonicMin</text>
+<text text-anchor="start" x="1515" y="-283" font-family="Linux libertine" font-size="10.00">depth:1</text>
+<polygon fill="none" stroke="black" points="1567,-291 1567,-312 1611,-312 1611,-291 1567,-291"/>
+<text text-anchor="start" x="1576.5" y="-299" font-family="Linux libertine" font-size="10.00">input:</text>
+<polygon fill="none" stroke="black" points="1611,-291 1611,-312 1663,-312 1663,-291 1611,-291"/>
+<text text-anchor="start" x="1616" y="-299" font-family="Linux libertine" font-size="10.00">(100, 10) </text>
+<polygon fill="none" stroke="black" points="1567,-270 1567,-291 1611,-291 1611,-270 1567,-270"/>
+<text text-anchor="start" x="1572" y="-278" font-family="Linux libertine" font-size="10.00">output: </text>
+<polygon fill="none" stroke="black" points="1611,-270 1611,-291 1663,-291 1663,-270 1611,-270"/>
+<text text-anchor="start" x="1618.5" y="-278" font-family="Linux libertine" font-size="10.00">(100, 1) </text>
+</g>
+<!-- 16&#45;&gt;17 -->
+<g id="edge26" class="edge">
+<title>16-&gt;17</title>
+<path fill="none" stroke="black" d="M1459.72,-291C1468.11,-291 1476.63,-291 1485.04,-291"/>
+<polygon fill="black" stroke="black" points="1485.02,-294.5 1495.02,-291 1485.02,-287.5 1485.02,-294.5"/>
+</g>
+<!-- 18 -->
+<g id="node19" class="node">
+<title>18</title>
+<polygon fill="lightyellow" stroke="none" points="1811,-307 1699,-307 1699,-275 1811,-275 1811,-307"/>
+<polygon fill="none" stroke="black" points="1699,-275 1699,-307 1767,-307 1767,-275 1699,-275"/>
+<text text-anchor="start" x="1704" y="-294" font-family="Linux libertine" font-size="10.00">output-tensor</text>
+<text text-anchor="start" x="1716.5" y="-283" font-family="Linux libertine" font-size="10.00">depth:0</text>
+<polygon fill="none" stroke="black" points="1767,-275 1767,-307 1811,-307 1811,-275 1767,-275"/>
+<text text-anchor="start" x="1772" y="-288.5" font-family="Linux libertine" font-size="10.00">(100, 1)</text>
+</g>
+<!-- 17&#45;&gt;18 -->
+<g id="edge27" class="edge">
+<title>17-&gt;18</title>
+<path fill="none" stroke="black" d="M1662.93,-291C1671.35,-291 1679.82,-291 1688.02,-291"/>
+<polygon fill="black" stroke="black" points="1688.02,-294.5 1698.02,-291 1688.02,-287.5 1688.02,-294.5"/>
+</g>
+</g>
+</svg>

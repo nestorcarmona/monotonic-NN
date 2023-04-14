@@ -7,7 +7,6 @@ class Monotonic(nn.Module):
     def __init__(self, latent):
         super().__init__()
         self.latent = latent
-        # self.size = latent.shape
 
     def getweights(self):
         return torch.exp(self.latent)
