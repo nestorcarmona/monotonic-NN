@@ -67,23 +67,29 @@ class MonotonicInteraction(nn.Module):
         return x
     
 class MonotonicNet(nn.Module):
-    def __init__(self, input_size, num_groups, group_sizes, increasing):
+    def __init__(self, input_size, num_groups, group_sizes, increasing, monotonic):
         super().__init__()
         self.input_size = input_size
         self.num_groups = num_groups
         self.group_sizes = group_sizes
         self.increasing = increasing
+        self.monotonic = monotonic
 
 
         self.layers = nn.ModuleList()
         for i in range(input_size):
             groups = []
-            for j in range(num_groups[i]):
-                group = MonotonicGroup(1, group_sizes[i], increasing[i])
-                groups.append(group)
+            if monotonic[i]:
+                for j in range(num_groups[i]):
+                    group = MonotonicGroup(1, group_sizes[i], increasing[i])
+                    groups.append(group)
+            else:
+                for j in range(num_groups[i]):
+                    group = nn.Linear(1, group_sizes[i])
+                    groups.append(group)
 
             self.layers.append(MonotonicLinear(nn.ModuleList(groups)))
-
+                
         # in multimensional, take into account the interaction between variables
         if input_size > 1:
             self.interaction_layer = nn.Linear(sum(group_sizes), sum(group_sizes))
@@ -94,7 +100,10 @@ class MonotonicNet(nn.Module):
     def forward(self, x):
         x1 = []
         for i, layer in enumerate(self.layers):
-            x1.append(layer(x[:, i].unsqueeze(1)))
+            if self.monotonic[i]:
+                x1.append(layer(x[:, i].unsqueeze(1)))
+            else:
+                x1.append(layer(x[:, i].unsqueeze(1)))
 
         x = torch.cat(x1, dim=2)
 
