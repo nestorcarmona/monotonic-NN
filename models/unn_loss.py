@@ -5,25 +5,30 @@ import numpy as np
 import math
 
 # define a dense neural network with 2 hidden layers
-class Net(nn.Module):
-    def __init__(self, in_features: int, out_features: int, hidden_size: list = [8, 8]) -> None:
-        super().__init__()
-        self.fc1 = nn.Linear(in_features, hidden_size[0])
-        self.fc2 = nn.Linear(hidden_size[0], hidden_size[1])
-        self.fc3 = nn.Linear(hidden_size[1], out_features)
+class FCNet(nn.Module):
+    def __init__(self, in_features: int, out_features: int, n_hidden: list = [8, 8]) -> None:
+        super(FCNet, self).__init__()
 
-        # batch normalization
-        self.bn1 = nn.BatchNorm1d(hidden_size[0])
-        self.bn2 = nn.BatchNorm1d(hidden_size[1])
+        self.net = []
+
+        hs = [in_features] + n_hidden + [out_features]
+
+        for h0, h1 in zip(hs, hs[1:]):
+            self.net.extend(
+                [
+                    nn.Linear(h0, h1),
+                    nn.BatchNorm1d(h1),
+                    nn.Sigmoid()
+                ]
+            )
+        
+        self.net.pop() # pop last batchnorm
+        self.net.pop() # pop last activation function for output layer
+        self.net = nn.Sequential(*self.net)
 
     # define the forward pass
     def forward(self, x: torch.Tensor) -> torch.Tensor:
-        x = F.sigmoid(self.fc1(x))
-        # x = self.bn1(x)
-        x = F.sigmoid(self.fc2(x))
-        # x = self.bn2(x)
-        x = self.fc3(x)
-        return x
+        return self.net(x) # type: ignore
     
     # define the monotonicity loss: compute divergence of output w.r.t. input
     def monotonicity_loss(self, x: torch.Tensor, M: torch.Tensor) -> torch.Tensor:
