@@ -33,9 +33,6 @@ class FCNet(nn.Module):
     # define the monotonicity loss: compute divergence of output w.r.t. input
     def monotonicity_loss(self, x: torch.Tensor, M: torch.Tensor) -> torch.Tensor:
         
-        if M is None:
-            return torch.tensor(0.0)
-        
         x.requires_grad_(True)
         y = self.forward(x)
 
