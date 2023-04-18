@@ -24,7 +24,7 @@ strict digraph MonLoss_graph_f6 {
                     <TABLE BORDER="0" CELLBORDER="1"
                     CELLSPACING="0" CELLPADDING="4">
                     <TR>
-                        <TD ROWSPAN="2">Sigmoid<BR/>depth:2</TD>
+                        <TD ROWSPAN="2">LeakyReLU<BR/>depth:2</TD>
                         <TD COLSPAN="2">input:</TD>
                         <TD COLSPAN="2">(100, 8) </TD>
                     </TR>
@@ -50,7 +50,7 @@ strict digraph MonLoss_graph_f6 {
                     <TABLE BORDER="0" CELLBORDER="1"
                     CELLSPACING="0" CELLPADDING="4">
                     <TR>
-                        <TD ROWSPAN="2">Sigmoid<BR/>depth:2</TD>
+                        <TD ROWSPAN="2">LeakyReLU<BR/>depth:2</TD>
                         <TD COLSPAN="2">input:</TD>
                         <TD COLSPAN="2">(100, 8) </TD>
                     </TR>

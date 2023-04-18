@@ -18,7 +18,7 @@ class FCNet(nn.Module):
                 [
                     nn.Linear(h0, h1),
                     # nn.BatchNorm1d(h1),
-                    nn.Sigmoid()
+                    nn.LeakyReLU()
                 ]
             )
         
@@ -33,13 +33,18 @@ class FCNet(nn.Module):
     # define the monotonicity loss: compute divergence of output w.r.t. input
     def monotonicity_loss(self, x: torch.Tensor, M: torch.Tensor) -> torch.Tensor:
         
+        if M is None:
+            return torch.tensor(0.0)
+        
         x.requires_grad_(True)
         y = self.forward(x)
 
         gradient = torch.autograd.grad(y, x, grad_outputs=torch.ones_like(y), create_graph=True, allow_unused=True)[0]
         
-        selected_gradient = torch.mm(gradient, M)
+        selected_gradient = torch.mm(gradient, M.T).view(1,-1)
+        
         directional_derivative = torch.sum(selected_gradient, dim=1)
+
         loss = torch.sum(torch.max(torch.zeros_like(directional_derivative), -directional_derivative))
 
         return loss

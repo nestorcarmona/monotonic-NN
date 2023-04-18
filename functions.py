@@ -47,4 +47,7 @@ def f8(x):
     noise = np.random.normal(mean, std, x.shape)
     return x**3 + x**2 + x + 1  # + noise
 
-
+# non-monotonic in x and y
+def f9(x, y):
+    noise = np.random.normal(mean, std, x.shape)
+    return x**2 - y**2
