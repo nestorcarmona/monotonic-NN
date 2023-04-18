@@ -34,15 +34,17 @@ def f5(x):
 # monotonic increasing in x and non-monotonic in y
 def f6(x, y):
     noise = np.random.normal(mean, std, x.shape)
-    # return x**3 + 0.5*np.sin(4*np.pi*y)  + noise
+    # 
     return x**2 + y**2
 
+# monotonic increasing in x, y and z
+def f7(x, y):
+    noise = np.random.normal(mean, std, x.shape)
+    return x**3 + 0.5*np.sin(4*np.pi*y)  + noise
+
 # non-monotonic in x and y
-def f7(x):
+def f8(x):
     noise = np.random.normal(mean, std, x.shape)
     return x**3 + x**2 + x + 1  # + noise
 
-# monotonic increasing in x, y and z
-def f8(x, y, z):
-    noise = np.random.normal(mean, std, x.shape)
-    return x+y+z  + noise
+
