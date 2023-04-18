@@ -42,6 +42,7 @@ This loss function penalizes non-motonic behaviours for the monotonic subset var
 The code is available at [models/monLoss.py](models/monLoss.py) with a Jupyter Notebook at [mon_loss.ipynb](mon_loss.ipynb).
 
 If you find these implementations useful, please cite this work with:
+```
 @misc{nhabibimonotonicnn,
   title={monotonic-NN},
   author={Carmona, Nestor},
@@ -50,3 +51,4 @@ If you find these implementations useful, please cite this work with:
   howpublished={\url{https://github.com/nestorhabibi/monotonic-NN/}},
   year={2023}
 }
+```
