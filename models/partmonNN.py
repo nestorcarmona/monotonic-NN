@@ -89,10 +89,8 @@ class MaxLayer(nn.Module):
         self.bias = nn.Parameter(torch.zeros(out_features))
         
     def forward(self, x):
-        # not sure if necessary
-        out = x @ self.weight + self.bias
         # maximum of the inputs coming from "MinLayer"
-        out = torch.max(out, dim=1, keepdim=True)[0]
+        out = torch.max(x, dim=1, keepdim=True)[0]
         return out
 
 class MonotonicNet(nn.Module):
@@ -118,7 +116,7 @@ class MonotonicNet(nn.Module):
             self.layer1 = nn.utils.weight_norm(self.layer1) # type: ignore
 
         # Batch normalization to keep same scale
-        self.bn1 = nn.BatchNorm1d(sum(self.group_sizes_l1))
+        # self.bn1 = nn.BatchNorm1d(sum(self.group_sizes_l1))
 
         # Hidden layer: min layer
         self.min_layer = MinLayer(num_groups=self.num_groups_l1, group_sizes=self.group_sizes_l1)
@@ -128,7 +126,6 @@ class MonotonicNet(nn.Module):
         
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         out = self.layer1(x)
-        out = self.bn1(out)
         out = self.min_layer(out)
         out = self.max_layer(out)
         return out

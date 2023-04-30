@@ -42,6 +42,6 @@ class FCNet(nn.Module):
         
         directional_derivative = torch.sum(selected_gradient, dim=1)
 
-        loss = torch.sum(torch.max(torch.zeros_like(directional_derivative), -directional_derivative))
+        loss = torch.sum((torch.max(torch.zeros_like(directional_derivative), -directional_derivative)**2))
 
         return loss

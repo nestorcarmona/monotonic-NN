@@ -76,9 +76,7 @@ class MinLayer(nn.Module):
         self.bias = nn.Parameter(torch.zeros(out_features))
         
     def forward(self, x: torch.Tensor) -> torch.Tensor:
-        # not sure if necessary
-        out = x @ self.weight + self.bias
-        out = torch.min(out, dim=1, keepdim=True)[0]
+        out = torch.min(x, dim=1, keepdim=True)[0]
         return out
 
 
